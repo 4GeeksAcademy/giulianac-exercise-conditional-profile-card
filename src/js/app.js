@@ -1,3 +1,4 @@
+import { variationPlacements } from "@popperjs/core";
 import "../style/index.css";
 
 /**
@@ -34,14 +35,38 @@ function render(variables = {}) {
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>${variables.name ? variables.name : 'Lucy'} ${variables.lastname ? variables.lastname : 'Boilett'}</h1>
-          <h2>${variables.role ? variables.role : 'Web Developer'}</h2>
-          <h3>${variables.city ? variables.city : 'Miami'} "," ${variables.country ? variables.country : 'USA'}</h3>
-          <ul class=${variables.socialMediaPosition ? variables.socialMediaPosition : 'position-right'}>
-            <li><a href=${variables.twitter ? }"https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <h1>${variables.name ? variables.name : "Lucy"} ${
+    variables.lastname ? variables.lastname : "Boilett"
+  }</h1>
+          <h2>${variables.role ? variables.role : "Web Developer"}</h2>
+          <h3>${variables.city ? variables.city : "Miami"}, ${
+    variables.country ? variables.country : "USA"
+  }</h3>
+          <ul class=${
+            variables.socialMediaPosition
+              ? variables.socialMediaPosition
+              : "position-right"
+          }>
+            <li><a href=${
+              variables.twitter
+                ? "https://twitter.com/" + variables.twitter
+                : "https://twitter.com/4geeksacademy"
+            }><i class="fab fa-twitter"></i></a></li>
+            <li><a href=${
+              variables.github
+                ? "https://github.com/" + variables.github
+                : "https://github.com/4geeksacademy"
+            }><i class="fab fa-github"></i></a></li>
+            <li><a href=${
+              variables.linkedin
+                ? "https://linkedin.com/" + variables.linkedin
+                : "https://linkedin.com/4geeksacademy"
+            }><i class="fab fa-linkedin"></i></a></li>
+            <li><a href=${
+              variables.instagram
+                ? "https://instagram.com/" + variables.instagram
+                : "https://instagram.com/4geeksacademy"
+            }><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
